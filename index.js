@@ -3,7 +3,7 @@ const {config} = require("./config/index")
 const mongoose = require("mongoose");
 
 
-mongoose.connect(process.config)
+mongoose.connect(config.MONGOURL)
 .then(()=>{
     console.log("Connected to db");
 }).catch(err=>{
